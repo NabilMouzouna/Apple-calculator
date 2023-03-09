@@ -20,7 +20,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 98vh;
 }
 body::before{
     content: "";
@@ -77,3 +77,12 @@ main{
 .orange {background-color: var(--OperatorsColor);}
 .gray {background-color: var(--NumbersColor);}
 .darkGray {background-color: var(--ACColor);}
+@media screen and (max-width:1608px) {
+    body{height: 100vh;}
+}
+@media screen and (max-width:780px) {
+    .container{
+        margin: 0;
+        border: none;
+    }
+}
