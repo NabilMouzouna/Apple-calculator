@@ -1,0 +1,79 @@
+:root{
+    --OperatorsColor :orange;
+    --NumbersColor :rgb(97, 96, 96);
+    --OutputColor :rgb(17, 17, 49);
+    --ACColor :rgb(66, 64, 64);
+    --backgroundImage :url("./")
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+
+}
+body{
+    position: relative;
+    background-image: url("./wallpaperflare.com_wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+body::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(5, 5, 62, 0.332);
+    z-index: -10;
+}
+main{
+    height: inherit;
+    max-width: 728px;
+    margin-inline: auto;
+}
+.container{
+    height: inherit;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 2vw;
+    overflow: hidden;
+    margin: 10px;
+    background-color: var(--OutputColor);
+
+}
+.output {
+    height: 25%;
+    padding: 10px 20px;
+    font-size: 4rem;
+    text-align: end;
+    font-weight: 150;
+    background-color: rgb(17, 17, 49);
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.keyboard{
+    height: 75%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 1px;
+}
+.keyboard button{
+    cursor: pointer;
+    padding: 20px;
+    border: none;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.orange {background-color: var(--OperatorsColor);}
+.gray {background-color: var(--NumbersColor);}
+.darkGray {background-color: var(--ACColor);}
